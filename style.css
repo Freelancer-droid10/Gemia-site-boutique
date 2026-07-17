@@ -1,0 +1,264 @@
+
+/* --- GLOBAL TYPOGRAPHY & RESET --- */
+body {
+    font-family: 'Montserrat', sans-serif; /* Clean modern secondary font */
+    margin: 0;
+    padding: 0;
+    background-color: #faf6f2; /* Beautiful ultra-soft Warm Alabaster background */
+    color: #1a1a1a; /* Soft upscale black */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- NICCI TOP ANNOUNCEMENT BAR --- */
+.top-announcement-bar {
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+/* --- EDITORIAL HEADER STYLING --- */
+header {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eae1d8; /* Soft warm border line */
+}
+
+.brand-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.logo {
+    max-width: 140px; /* Scaled perfectly for high-end boutique headers */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; /* Signature luxury font choice */
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 0 0 10px 0;
+    color: #111111;
+}
+
+header .subtitle {
+    font-size: 0.85rem;
+    color: #777777;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 25px 0;
+}
+
+/* Minimalist Promo Pill */
+.promo-pill {
+    display: inline-block;
+    border: 1px solid #111111;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* --- MAIN LAYOUT STRUCTURE --- */
+.boutique-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 24px;
+}
+
+/* Lookbook Content Containers */
+.lookbook-section {
+    margin-bottom: 80px;
+}
+
+/* Nicci-Style Editorial Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-header::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #111111;
+    margin: 20px auto 0 auto;
+}
+
+.collection-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #b5838d; /* Your gorgeous rose-gold accent color */
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0 0 8px 0;
+}
+
+.section-header p {
+    font-size: 0.9rem;
+    color: #666666;
+    font-style: italic;
+    margin: 0;
+}
+
+/* --- BOUTIQUE GRID SYSTEM --- */
+.boutique-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+/* Center lookbooks containing a single item cleanly */
+.single-item-grid {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* --- NICCI HIGH-FASHION PRODUCT CARDS --- */
+.product-card {
+    background: #ffffff;
+    border-radius: 0px; /* Sharp corners match luxury editorial catalogs */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ede4dc; /* Very faint elegant tan border outline */
+    transition: box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 15px 40px rgba(181, 131, 141, 0.08); /* Luxurious warm hue shadow glow */
+}
+
+/* Image Container Wrapper for Fluid Motion */
+.product-card .img-container {
+    overflow: hidden;
+    width: 100%;
+    height: 440px; /* Editorial elongated layout aspect ratio */
+    background-color: #fcfcfc;
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* Silk-smooth luxury slide */
+}
+
+/* Activates zoom response when hovering over card */
+.product-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Card Content Details */
+.product-info {
+    padding: 24px 20px;
+    text-align: center;
+}
+
+.product-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+    color: #111111;
+}
+
+.product-card .price {
+    font-size: 1.1rem;
+    color: #b5838d; /* Retains your premium signature rose gold color */
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+/* --- SOPHISTICATED PRODUCT BADGES --- */
+.card-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 5;
+}
+
+.premium-tag { background-color: #111111; }
+.trending-tag { background-color: #b5838d; }
+
+/* --- LUXURY MINIMALIST CONVERSION BUTTONS --- */
+.shop-btn {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 12px 0;
+    background-color: #111111; /* Strong clean black button face */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 0px; /* Rigid styling */
+    transition: all 0.3s ease;
+    border: 1px solid #111111;
+}
+
+.shop-btn:hover {
+    background-color: transparent;
+    color: #111111; /* Sleek, luxury transparent-invert frame outline response */
+}
+
+/* --- EDITORIAL BOUTIQUE FOOTER --- */
+footer {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 1px solid #eae1d8;
+    margin-top: 100px;
+}
+
+.footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    margin: 0 0 15px 0;
+    color: #111111;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #777777;
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
+}
+
+.disclaimer {
+    font-size: 0.7rem;
+    color: #bfaea2;
+    margin: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
